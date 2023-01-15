@@ -1,6 +1,6 @@
 [package]
 name = "spell-maker"
-version = "0.1.1"
+version = "0.1.2"
 description = "An Ars Magica spell creation tool"
 authors = ["JoacoSlime"]
 license = ""
