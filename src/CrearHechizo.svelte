@@ -16,18 +16,26 @@
     let totalHechizo;
     let nivelHechizo = 0;
 
+    function sumarUnoAUno(aSumar){
+        // make the same but using a for
+        for(let i = 0; i < aSumar; i++){
+            nivelHechizo += (nivelHechizo > 4) ?  5 : 1;
+        }
+    }
+
     function calcularTotalHechizo(){
         // Make totalHechizo equal to the sum of totalLaboratorio and add a 1 for each checked box
         totalHechizo = totalLaboratorio + fieldSimilar;
         totalHechizo += fieldInestable * 3;
         totalHechizo += fieldComponentes;
         nivelHechizo = fieldNivelBase;
-        nivelHechizo += fieldAlcance;
-        nivelHechizo += fieldDuracion;
-        nivelHechizo += checkObjetivo * (fieldObjetivo + fieldTamano);
-        nivelHechizo += checkSentido * fieldSentido;
-        if (nivelHechizo > 5){
-            nivelHechizo = 5 + (nivelHechizo - 5) * 5;
+        sumarUnoAUno(fieldAlcance);
+        sumarUnoAUno(fieldDuracion);
+        if (checkObjetivo) {
+            sumarUnoAUno(fieldObjetivo + fieldTamano);
+        }
+        if (checkSentido) {
+            sumarUnoAUno(fieldSentido);
         }
     }
 
