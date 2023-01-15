@@ -97,7 +97,7 @@
     {#if totalHechizo - nivelHechizo > 0}
         <h3>Se tardan: {Math.ceil(nivelHechizo / (totalHechizo - nivelHechizo))}</h3>
     {:else}
-        <h3>No se puede crear el hechizo. Faltan {nivelHechizo-totalHechizo+1} puntos de total de Laboratorio.</h3>
+        <h3>No se puede crear el hechizo. Faltan {(nivelHechizo+1)-totalHechizo} puntos de total de Laboratorio.</h3>
     {/if}
 </body>
 

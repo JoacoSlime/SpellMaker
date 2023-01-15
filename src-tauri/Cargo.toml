@@ -1,8 +1,8 @@
 [package]
 name = "spell-maker"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+version = "0.1.1"
+description = "An Ars Magica spell creation tool"
+authors = ["JoacoSlime"]
 license = ""
 repository = ""
 edition = "2021"
