@@ -58,7 +58,7 @@
     <div class="form">
         <div>
             <label for="fieldNivelBase">Nivel base: </label>
-            <input type="number" id="fieldNivelBase" name="fieldNivelBase" bind:value={fieldNivelBase} min=0 max=4 />
+            <input type="number" id="fieldNivelBase" name="fieldNivelBase" bind:value={fieldNivelBase} min=0 />
         </div>
         <div>
             <label for="fieldAlcance">Magnitud del alcance: </label>
@@ -82,8 +82,8 @@
                 <input type="number" id="fieldObjetivo" name="fieldObjetivo" bind:value={fieldObjetivo} min=0 />
             </div>
             <div>
-                <label for="fieldMultiplicadorObjetivo">Multiplicador del objetivo: </label>
-                <input type="number" id="fieldMultiplicadorObjetivo" name="fieldMultiplicadorObjetivo" bind:value={fieldTamano} min=1 />
+                <label for="fieldTamano">Multiplicador de tamaño: </label>
+                <input type="number" id="fieldTamano" name="fieldTamano" bind:value={fieldTamano} min=1 />
             </div>
         {/if}
         {#if checkSentido}
@@ -97,7 +97,7 @@
     {#if totalHechizo - nivelHechizo > 0}
         <h3>Se tardan: {Math.ceil(nivelHechizo / (totalHechizo - nivelHechizo))}</h3>
     {:else}
-        <h3>No se puede crear el hechizo. Faltan {nivelHechizo-totalHechizo} puntos de total de Laboratorio.</h3>
+        <h3>No se puede crear el hechizo. Faltan {nivelHechizo-totalHechizo+1} puntos de total de Laboratorio.</h3>
     {/if}
 </body>
 
