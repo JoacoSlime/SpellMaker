@@ -20,6 +20,7 @@
             ignem: 0,
             terram: 0,
             auram: 0,
+            aquam: 0,
             imaginem: 0,
             mentem: 0,
             vim: 0
